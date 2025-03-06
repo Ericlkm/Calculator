@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="calc">
+      <div class="js-calc">
+        <div class="line"></div>
+        <span>Javascript Calculator</span>
+      </div>
+      <div class="calc-card">
+        <input id="display" readonly placeholder="50 * 8 + 20" />
+        <div class="buttons">
+          <span class="btn orange" onclick="displayValue(`+`)">+</span>
+          <span class="btn" onclick="displayValue(`9`)">9</span>
+          <span class="btn" onclick="displayValue(`8`)">8</span>
+          <span class="btn" onclick="displayValue(`7`)">7</span>
+          <span class="btn orange" onclick="displayValue(`-`)">-</span>
+          <span class="btn" onclick="displayValue(`6`)">6</span>
+          <span class="btn" onclick="displayValue(`5`)">5</span>
+          <span class="btn" onclick="displayValue(`4`)">4</span>
+          <span class="btn orange" onclick="displayValue(`*`)">*</span>
+          <span class="btn" onclick="displayValue(`1`)">1</span>
+          <span class="btn" onclick="displayValue(`2`)">2</span>
+          <span class="btn" onclick="displayValue(`3`)">3</span>
+          <span class="btn orange" onclick="displayValue(`/`)">/</span>
+          <span class="btn" onclick="displayValue(`0`)">0</span>
+          <span class="btn" onclick="displayValue(`.`)">.</span>
+          <span class="btn red" id="clear">c</span>
+          <span class="btn orange" onclick="calc()">=</span>
+        </div>
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
