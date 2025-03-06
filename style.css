@@ -77,7 +77,12 @@
   place-self: center;
 }
 .btn {
-  background-color: #00000027;
+  /* background-color: #00000027; */
+  background: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.105),
+    rgba(0, 0, 0, 0.266)
+  );
   box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.456);
   border-radius: 50%;
   color: white;
