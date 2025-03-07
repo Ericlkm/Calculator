@@ -1,37 +1,62 @@
 const display = document.getElementById("display");
+const clearBtn = document.getElementById("clear");
 
 function displayValue(val) {
   display.value += val;
-  console.log(display.value);
 }
-let value = display.value;
+
 function calc() {
   if (display.value !== "") {
+    // if input is not empty solve equation;
     display.value = eval(display.value);
   } else {
-    display.value = "Error";
+    // else if input is empty set the value to "Error"
+    display.value = "error";
     setTimeout(() => {
+      // after one second clear value
       display.value = "";
     }, 1000);
   }
 }
-const clearBtn = document.getElementById("clear");
 
 function clear() {
+  // clears Value
   display.value = "";
 }
 
-clearBtn.addEventListener("click", clear);
-
-addEventListener("keyup", (e) => {
-  console.log(display.value);
-  if (e.key === "Enter" && display.value === "") {
-    display.value = "error";
-    setTimeout(() => {
-      display.value = "";
-    }, 1000);
-  }
+function handleKeyPress(e) {
   if (e.key === "Enter") {
-    display.value = eval(display.value);
+    calc();
   }
-});
+  const allowedKeys = [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    ".",
+    "+",
+    "-",
+    "*",
+    "/",
+    "Backspace",
+    "Enter",
+    "Delete",
+    "ArrowLeft",
+    "ArrowRight",
+  ];
+
+  // If the key pressed is not in the allowed keys, prevent the default behavior
+  if (!allowedKeys.includes(e.key)) {
+    e.preventDefault();
+  }
+}
+
+clearBtn.addEventListener("click", clear);
+// Add the event listener for keydown to allow typing on the keyboard
+display.addEventListener("keydown", handleKeyPress);
