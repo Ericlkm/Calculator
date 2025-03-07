@@ -1,4 +1,4 @@
-[" https://ericlkm.github.io/Calculator/"](Try it here!!)
+["https://ericlkm.github.io/Calculator/"] (Try it here!!)
 
 # Simple JavaScript Calculator
 
