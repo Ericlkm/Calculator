@@ -1,6 +1,4 @@
-<a href=" https://ericlkm.github.io/Calculator/">
-  Try is here!!
-</a>
+[" https://ericlkm.github.io/Calculator/"](Try it here!!)
 
 # Simple JavaScript Calculator
 
